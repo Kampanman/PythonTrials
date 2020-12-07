@@ -1,0 +1,435 @@
+第1問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+dic = 'diveintocode'
+
+print(dic[1:10:2])
+
+×　ienooe
+×　ie
+○　ienoo
+×　dvitc
+
+第2問
+問題文のprint文を実行した場合の、出力結果を選びなさい。
+
+print("出力結果:")
+print('円周率は%5.3fである。'%math.pi)
+
+× 出力結果:円周率は5.55である。
+○ 出力結果:円周率は3.142である。
+× 出力結果:円周率は3.14である。
+× 出力結果:円周率は5.142である。
+
+第3問
+pythonインタープリタにて
+
+D:\home\name\python
+と出力させるための入力として正しいものを選びなさい。
+
+○ print(r'D:\home\name\python')
+× print('D:\home\name\python')
+× print(r'D:\home\name\python'r)
+× print(“D:\home\name\python”)
+
+第4問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+num = [[1, 2, 3, 4, 5],
+       [6, 7, 8, 9, 10]]
+
+col = [row[2] for row in num]
+
+print(col)
+
+× [1, 2, 3, 4, 5]
+× [2, 7]
+× [6, 7, 8, 9, 10]
+○ [3, 8]
+
+第5問
+問題文のfor文を実行した場合の、出力結果を選びなさい。
+
+print("出力結果:")
+for num in range(10):
+  print(num)
+
+× 出力結果：9 8 7 6 5 4 3 2 1 0
+○ 出力結果：0 1 2 3 4 5 6 7 8 9
+× 出力結果：1 2 3 4 5 6 7 8 9 10
+× 出力結果：109 8 7 6 5 4 3 2 1
+
+第6問
+プログラムを実行し、下記の実行結果を得たい。
+
+Noro
+Miyaoka
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+class DiveIntoCode:
+    def __init__(self, teacher, mentor):
+        self.teacher = teacher
+        self.mentor  = mentor
+
+(A)
+print(dic.teacher)
+print(dic.mentor)
+
+○ dic = DiveIntoCode('Noro', 'Miyaoka')
+× dic = DiveIntoCode new('Noro', 'Miyaoka')
+× dic = DiveIntoCode.new('Noro', 'Miyaoka')
+× dic = new.DiveIntoCode('Noro', 'Miyaoka')
+
+第7問
+Pythonがサポートする複素数の虚部を表す接尾辞で正しいものを選びなさい。
+
+× 「c」または「C」
+× 「w」または「W」
+○ 「j」または「J」
+× 「r」または「R」
+
+第8問
+リストから、引数の値(x)の最初のアイテムを削除するメソッドを選びなさい。
+
+× list.delete(x)
+○ list.remove(x)
+× list.move(x)
+× list.clear(x)
+
+第9問
+Pythonのコーディングスタイルについて、誤っているものを選択肢から選びなさい。
+
+○ 可能であればコメント行を独立させるのを避ける。
+× クラスにはCamelCase（単語の頭文字を大文字にして接続するスタイル）を、関数やメソッドにはlower_case_with_underscores（小文字の単語同士をアンダースコアで繋ぐ）を使う。
+× 演算子の周囲やカンマの後ろにはスペースを入れるが、カッコのすぐ内側には入れない。
+× docstringを使う。
+
+第10問
+Pythonの変数に関する記述として正しいものを選択肢から選びなさい。
+
+× ビルトイン名のシンボル表は builins() 関数で確認できる
+× 変数に値を代入しないで実行しようとするとTypeErrorが表示される
+× 関数内からグローバル変数は参照することができない
+○ 関数内で変数に代入を行うと、その値がローカル変数のシンボル表に記録される
+
+第11問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+print(5 ** 2 + 4)
+
+○ 29
+× 10
+× 39
+× 40
+
+第12問
+ファイルの読み書きで使用する「open」関数のモードについて、存在しないものを選択肢の中から選びなさい。
+
+× w
+× r+
+× a
+○ r-
+
+第13問
+Pythonインタープリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。
+
+>>> import math
+>>> math.cos(math.pi / 5)
+
+× 3.1415
+× TypeErrorとなる。
+○ 0.8090169944
+× SyntaxErrorとなる。
+
+第14問
+次の中からmutableなものをまとめたものとして適切なものを選びなさい
+
+○ リスト
+× タプル
+× 該当なし
+× タプルとリスト
+
+第15問
+対話環境のでヒストリ情報が保存されているファイルを選択肢の中から選びなさい。
+
+× .history_data
+○ .python_history
+× .hitory_info
+× .pyHistory
+
+第16問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+print(range(5))
+
+× (0,5)
+○ range(0, 5)
+× 0,1,2,3,4
+× [0, 1, 2, 3, 4]
+
+第17問
+問題文のプログラムを実行した場合の、出力結果を選びなさい。
+
+print("出力結果:")
+try:
+  raise Exception("開始前","Exception発生")
+  print("開始")
+except IOError as msg:
+  print("IOError発生:",msg.args[0])
+except Exception as msg:
+  print("予期せぬ問題発生:",msg.args[1])
+else:
+  print("Else表示")
+
+○ 出力結果:予期せぬ問題発生: Exception発生
+× 出力結果:予期せぬ問題発生:開始前
+× 出力結果:予期せぬ問題発生:開始前 Exception発生 Else表示
+× 出力結果: IOError発生:開始前"
+
+第18問
+以下のプログラムをインタープリタにて実行した際の出力結果を選びなさい。
+
+[(x, y) for x in [0,1,2] for y in [1,2,3] if x != y]
+
+○ [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 1), (2, 3)]
+× [(0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)]
+× [(0, 1), (2, 1), (0, 2), (1, 2), (0, 3), (1, 3), (2, 3)]
+× [(0, 1), (1, 1), (2, 1), (0, 2), (1, 2), (2, 2), (0, 3), (1, 3), (2, 3)]
+
+第19問
+バイナリデータレコードの処理を行うモジュールを選択肢の中から選びなさい。
+
+× binary
+× bin
+× data
+○ struct
+
+第20問
+インタープリンタを起動時のオプション「-m」の説明として適切なものを選びなさい。
+
+× メガバイトのファイルを使用できるようにする。
+× マルチモードで起動する。
+× 自分自身の情報をはじめに表示する。
+○ モジュールの指定を行う。
+
+第21問
+以下のプログラムを実行した際と等価の記述を選択肢の中から選びなさい。
+
+t = 123,345,'test'
+
+× t = <123,345,'test'>
+× t = {123,345,'test'}
+○ t = (123,345,'test')
+× t = [123,345,'test']
+
+第22問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+list = [5, 3, 1, 2, 3, 4, 5, 2]
+list.remove(2)
+print(list)
+
+× ValueError:
+× [5, 3, 1, 3, 4, 5]
+○ [5, 3, 1, 3, 4, 5, 2]
+× [5, 3, 2, 3, 4, 5, 2]
+
+第23問
+プログラムを実行し、下記の実行結果を得たい。
+
+Miyashita
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+dive_into_code = ['Noro', 'Nakao', 'Miyaoka', 'Miyashita', 'Shibata', 'Kimura']
+
+(A)
+
+print(ex_mentor)
+
+× ex_mentor = dive_into_code.clear(3)
+○ ex_mentor = dive_into_code.pop(3)
+× ex_mentor = dive_into_code.remove(3)
+× ex_mentor = dive_into_code.destroy(3)
+
+第24問
+Pythonの対話型インタープリンタの中で存在するものを選択肢の中から選びなさい。
+
+× PythonI
+× JpythonF
+× ZPython
+○ IPython
+
+第25問
+問題文のプログラムを実行した場合の、出力結果を選びなさい。
+
+class Sample:
+
+  c_list = []
+
+  def add_c_list(self,data):
+    self.c_list.append(data)
+
+print("出力結果:", end=" ")
+sample1 = Sample()
+sample1.add_c_list("データ1")
+
+sample2 = Sample()
+sample2.add_c_list("データ2")
+
+for item_data in sample1.c_list:
+  print(item_data, end=" ")
+
+○ 出力結果: データ1 データ2
+× 出力結果:データ1
+× 出力結果:データ2
+× 出力結果:
+
+第26問
+次のprint文のうち、「こんにちは！山田さん」と出力される記述はどれかを選びなさい。
+
+○ print('こんにちは!{}さん'.format('山田'))
+× print('こんにちは!()さん'+'山田')
+× print('こんにちは!{}さん', '山田')
+× print('こんにちは!()さん', '山田')
+
+第27問
+ビルドイン関数dir()についての適切なものを選びなさい。
+
+× モジュールで定義されている変数の一覧を表示することができる。
+○ モジュールを配置するディレクトリの一覧を確認することができる。
+× モジュールが定義している名前を確認することができる。
+× モジュールで定義されている関数の一覧を表示することができる。
+
+第28問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+diver = [d * 2 for d in 'diver']
+
+print(diver)
+
+× ['diver', 'diver', 'diver', 'diver', 'diver']
+× SyntaxErrorとなる。
+○ ['dd', 'ii', 'vv', 'ee', 'rr']
+× ['diver', 'diver']
+
+第29問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+d = 'dive\ninto\ncode\t'
+
+print(len(d))
+
+× 20
+○ 15
+× 12
+× 18
+
+第30問
+以下のプログラムをインタープリタにて実行した際の出力結果を選びなさい。
+
+(1,3,5) < (1,2,3,4)
+
+× TRUE
+○ FALSE
+× TypeError
+× (1,2,3,4)
+
+第31問
+pythonインタープリタを終了するコマンドを、選択肢の中から選びなさい。
+
+○ quit()
+× q
+× kill()
+× end()
+
+第32問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+d = 'diveinto'
+
+d + 'code'
+
+print(d)
+
+× codediveinto
+○ diveinto
+× dcode
+× diveintocode
+
+第33問
+コマンドライン引数を取得するためのモジュールを選択肢の中から選びなさい。
+
+× os
+○ sys
+× glob
+× arg
+
+第34問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+i = 10
+
+def num(arg=i):
+    print(arg)
+
+i = 7
+
+num()
+
+○ 10
+× 7
+× SyntaxErrorとなる。
+× 17
+
+第35問
+クリーンアップ動作を定義してあるオブジェクトに対して、クリーナップ動作を保証した形で利用するための構文で適切なものを選びなさい。
+
+× follow
+× together
+× open
+○ with
+
+第36問
+対話モード時に、最後に表示した式を格納している変数を選びなさい。
+
+× 変数：#(シャープ)
+○ 変数：_ (アンダーバー)
+× 変数：-(ハイフン)
+× 変数：＾(ハット)
+
+第37問
+シーケンスデータ型について説明した文章で正しいものを
+選択肢の中から選びなさい。
+
+× リストは「mutable」であり、 タプルの中に格納することができない。
+× タプルは「mutable」であり、 重複したデータを格納することができる。
+○ タプルは「immutable」であり、 アンパッキングしてアクセスすることができる。
+× リストは「immutable」であり、 重複したデータを格納することができない。
+
+第38問
+pythonインタープリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。
+
+25//7
+
+× 3.571428571
+× 4
+○ 3
+× FALSE
+
+第39問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+print(3 * 'Dive' + 'into' + 'Code')
+
+× DiveintoCodeDiveintoCodeDiveintoCode
+× Errorとなる。
+○ DiveDiveDiveintoCode
+× DiveDiveDiveintointointoCodeCodeCode
+
+第40問
+構文的に文が必要なのに、プログラム的には何もする必要がないときに使う構文を選びなさい。
+
+× nothing
+○ pass
+× idle
+× Through

@@ -1,0 +1,465 @@
+第1問
+問題文のプログラムを実行した場合の、出力結果を選びなさい。
+
+class Sample:
+
+  c_list = []
+
+  def add_c_list(self,data):
+    self.c_list.append(data)
+
+print("出力結果:", end=" ")
+sample1 = Sample()
+sample1.add_c_list("データ1")
+
+sample2 = Sample()
+sample2.add_c_list("データ2")
+
+for item_data in sample1.c_list:
+  print(item_data, end=" ")
+
+× 出力結果:データ1
+× 出力結果:データ2
+○ 出力結果: データ1 データ2
+× 出力結果:
+
+第2問
+pythonインタープリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。
+
+>>>3*3.72/1.5
+
+○ 7.44
+× Errorとなる。
+× 7.4
+× 7
+
+第3問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+dic = [
+    ['Noro', 'Nakao', 'Miyaoka'],
+    ['Kimura', 'Miyashita', 'Shibata'],
+    ['Matsumoto', 'Tanaka', 'Ivan'],
+]
+
+print(list(zip(*dic)))
+
+× [['Noro', 'Nakao', 'Miyaoka'), ('Kimura', 'Miyashita', 'Shibata'), ('Matsumoto', 'Tanaka', 'Ivan']]
+○ [('Noro', 'Kimura', 'Matsumoto'), ('Nakao', 'Miyashita', 'Tanaka'), ('Miyaoka', 'Shibata', 'Ivan')]
+× [['Noro', 'Kimura', 'Matsumoto'], ['Nakao', 'Miyashita', 'Tanaka'], ['Miyaoka', 'Shibata', 'Ivan']]
+× [('Noro', 'Nakao', 'Miyaoka'), ('Kimura', 'Miyashita', 'Shibata'), ('Matsumoto', 'Tanaka', 'Ivan')]
+
+第4問
+Pythonがサポートする複素数の虚部を表す接尾辞で正しいものを選びなさい。
+
+× 「w」または「W」
+× 「c」または「C」
+× 「r」または「R」
+○ 「j」または「J」
+
+第5問
+仮想環境にインストールされたすべてのパッケージを表示するpipのオプションを
+選択肢の中から選びなさい。
+
+○ pip list
+× pip show
+× pip packages
+× pip installs
+
+第6問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+name1,name2,name3,name4= '', 'suzuki','tanaka','sato'
+selected_name = name1 or name2 or name3 or name4
+print(selected_name)
+
+× None
+× tanaka
+○ suzuki
+× sato
+
+第7問
+Pythonの変数に関する記述として正しいものを選択肢から選びなさい。
+
+× 関数内からグローバル変数は参照することができない
+× 変数に値を代入しないで実行しようとするとTypeErrorが表示される
+○ 関数内で変数に代入を行うと、その値がローカル変数のシンボル表に記録される
+× ビルトイン名のシンボル表は builins() 関数で確認できる
+
+第8問
+pythonインタープリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。
+
+ >>>letter = 'diveintoexam'
+ >>>letter[-8] 
+
+○ ‘i’
+× ’e’
+× ‘v’
+× ‘d’
+
+第9問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+member = {1: 'Noro', 2: 'Nakao', 3: 'Miyaoka'}
+member[4] = 'Kimura'
+del member[3]
+print(list(member.keys()))
+
+○ [1, 2, 4]
+× ['Noro', 'Nakao', 'Kimura']
+× Errorとなる。
+× [1, 2, 3]
+
+第10問
+ビルドイン関数dir()についての適切なものを選びなさい。
+
+○ モジュールが定義している名前を確認することができる。
+× モジュールで定義されている関数の一覧を表示することができる。
+× モジュールを配置するディレクトリの一覧を確認することができる。
+× モジュールで定義されている変数の一覧を表示することができる。
+
+第11問
+問題文のprint文を実行した場合の、出力結果を選びなさい。
+
+print("出力結果:")
+print('円周率は%5.3fである。'%math.pi)
+
+× 出力結果:円周率は3.14である。
+× 出力結果:円周率は5.55である。
+○ 出力結果:円周率は3.142である。
+× 出力結果:円周率は5.142である。
+
+第12問
+以下のプログラムを実行した際と等価の記述を選択肢の中から選びなさい。
+
+t = 123,345,'test'
+
+× t = [123,345,'test']
+○ t = (123,345,'test')
+× t = <123,345,'test'>
+× t = {123,345,'test'}
+
+第13問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+print(list(range(5)))
+
+○ [0, 1, 2, 3, 4]
+× 0,1,2,3,4,5
+× [0, 1, 2, 3, 4, 5]
+× list(0, 5)
+
+第14問
+バイナリデータレコードの処理を行うモジュールを選択肢の中から選びなさい。
+
+× bin
+× binary
+○ struct
+× data
+
+第15問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+dic = 'diveintocode'
+
+print(dic[1:10:2])
+
+○ ienoo
+× ienooe
+× ie
+× dvitc
+
+第16問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+a = 2
+b = 5
+
+c = 3.0 + b, 5 * a
+
+print(c)
+
+○ (8.0, 10)
+× [8.0, 10]
+× SyntaxErrorとなる。
+× TypeErrorとなる。
+
+第17問
+Pythonの関数について正しいものを選択肢から選びなさい。
+
+× キーワード引数は全て関数定義の仮引数に書いたものと一致している必要はない。
+× キーワード引数は全て関数定義の仮引数に書いたものと一致している必要があり、順序も仮引数に書いた順である必要がある。
+× 関数をコールするときは、必ずキーワード引数が先で位置引数を後にしなければならない。
+○ 関数をコールするときは、必ず位置引数が先でキーワード引数を後にしなければならない。
+
+第18問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+num_list  = [2, 4, 6, 4, 4, 2, 6]
+for i in range(num_list.count(4)):
+    print(i, end=' ')
+
+× 0 1 2 3
+× 1 2 3
+○ 0 1 2
+× 4 4 4
+
+第19問
+プログラムを実行し、下記の実行結果を得たい。
+
+['Noro']
+['Noro', 'Nakao']
+['Noro', 'Nakao', 'Miyashita']
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+def dive_into_code(teacher, L=[]):
+    (A)
+    return L
+
+print(dive_into_code('Noro'))
+print(dive_into_code('Nakao'))
+print(dive_into_code('Miyashita'))
+
+× L.extend(teacher)
+○ L.append(teacher)
+× L.insert(teacher)
+× L.copy(teacher)
+
+第20問
+「パッケージ」の説明として正しいものを選択肢から選びなさい。
+
+× 値が格納される場所。
+× 使われなくなったメモリを解放するプロセス。
+○ 「ドット区切りモジュール名」を使ってPythonのモジュールを構築する方法。
+× 関数の仮引数や返り値に関連づけられた任意メタデータ。
+
+第21問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+d = 'diveinto'
+
+d + 'code'
+
+print(d)
+
+× dcode
+○ diveinto
+× diveintocode
+× codediveinto
+
+第22問
+構文的に文が必要なのに、プログラム的には何もする必要がないときに使う構文を選びなさい。
+
+× nothing
+× Through
+○ pass
+× idle
+
+第23問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+import json
+x = {'name':'yamada','data':[2,3,4]}
+print(json.dumps(x))
+
+× {"name": "yamada", "data": "[2, 3, 4]"}
+○ {"name": "yamada", "data": [2, 3, 4]}
+× {"name": "yamada", "data": ["2", "3", "4"]}
+× {"name":yamada, "data": [2, 3, 4]}
+
+第24問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+dive_into_code = [(1, 'Noro'), (2, 'Nakao'), (3, 'Miyaoka'), (4, 'Kimura')]
+dic = dive_into_code
+dic.sort(key=lambda dic: dic[1])
+
+print(dic)
+
+× [(4, 'Kimura'), (2, 'Nakao'), (3, 'Miyaoka'), (1, 'Noro')]
+× [(4, 'Kimura'), (1, 'Noro'), (2, 'Nakao'), (3, 'Miyaoka')]
+× [(4, 'Kimura'), (1, 'Noro'), (3, 'Miyaoka'), (2, 'Nakao')]
+○ [(4, 'Kimura'), (3, 'Miyaoka'), (2, 'Nakao'), (1, 'Noro')]
+
+第25問
+以下のプログラムを実行した際の出力結果を選びなさい。
+
+a = 2
+b = 5
+
+c = 3.0 + b, 5 * a
+
+print(c)
+
+○ (8.0, 10)
+× TypeErrorとなる。
+× SyntaxErrorとなる。
+× [8.0, 10]
+
+第26問
+正規表現ツールを提供するモジュールを選択肢の中から選びなさい。
+
+○ re
+× regexp
+× matcher
+× pattern
+
+第27問
+例外の処理の説明として誤っているものを選択肢から選びなさい。
+
+× try節の実行中に例外が発生すると、try節中の残りはスキップされる。
+× 例外の型がexcept節にある名前と一致しない場合、送出された例外はさらに外側にあるtry文に渡される。
+× 最初にtry節が実行される。
+× else節は全てのexcept節より前でなければならない。
+
+第28問
+以下のプログラムを実行した際の出力結果として正しいものを選択しなさい。
+
+diver = [d * 2 for d in 'diver']
+
+print(diver)
+
+× SyntaxErrorとなる。
+× ['diver', 'diver']
+○ ['dd', 'ii', 'vv', 'ee', 'rr']
+× ['diver', 'diver', 'diver', 'diver', 'diver']
+
+第29問
+pythonインタープリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。
+
+25//7
+
+× FALSE
+○ 3
+× 3.571428571
+× 4
+
+第30問
+コマンドライン引数を取得するためのモジュールを選択肢の中から選びなさい。
+
+× os
+○ sys
+× glob
+× arg
+
+第31問
+プログラムを実行し、下記の実行結果を得たい。
+
+2017-09-11
+下記のプログラムの(A)及び(B)に記述すべきコードの組み合わせを選択肢から選びなさい。
+
+from (A) import (B)
+now = date.today()
+print(now)
+
+× (A)date (B)date
+○ (A)datetime (B)date
+× (A)datetime (B)datetime
+× (A)date (B)datetime
+
+第32問
+Pythonにおけるタブ補完について正しいものを選択肢から選びなさい。
+
+○ 変数とモジュール名の補完はインタープリタの起動時に自動で有効になっており、[Tab]キーで補完機能が呼び出せる。
+× 変数とモジュール名の補完はPCの起動時に自動で有効になっており、[Tab]+[ctrl]キーで補完機能が呼び出せる。
+× 変数とモジュール名の補完はPCの起動時に自動で有効になっており、[Tab]キーで補完機能が呼び出せる。
+× 変数とモジュール名の補完はインタープリタの起動時に自動で有効になっており、[Tab]+[ctrl]キーで補完機能が呼び出せる。
+
+第33問
+対話環境のでヒストリ情報が保存されているファイルを選択肢の中から選びなさい。
+
+× .hitory_info
+○ .python_history
+× .pyHistory
+× .history_data
+
+第34問
+以下のプログラムと同じ出力結果を得たい。
+
+dive_into_code = ['Noro', 'Nakao', 'Miyaoka', 'Miyashita', 'Shibata', 'Kimura']
+dive_into_code.clear()
+print(dive_into_code)
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+dive_into_code = ['Noro', 'Nakao', 'Miyaoka', 'Miyashita', 'Shibata', 'Kimura']
+
+(A)
+
+print(dive_into_code)
+
+○ delete dive_into_code[:]
+× delete dive_into_code()
+× del dive_into_code[:]
+× del dive_into_code()
+
+第35問
+対話モード時に、最後に表示した式を格納している変数を選びなさい。
+
+× 変数：-(ハイフン)
+× 変数：＾(ハット)
+○ 変数：_ (アンダーバー)
+× 変数：#(シャープ)
+
+第36問
+プログラムを実行し、下記の実行結果を得たい。
+
+Noro
+Miyaoka
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+class DiveIntoCode:
+    def __init__(self, teacher, mentor):
+        self.teacher = teacher
+        self.mentor  = mentor
+
+(A)
+print(dic.teacher)
+print(dic.mentor)
+
+○ dic = DiveIntoCode('Noro', 'Miyaoka')
+× dic = DiveIntoCode.new('Noro', 'Miyaoka')
+× dic = new.DiveIntoCode('Noro', 'Miyaoka')
+× dic = DiveIntoCode new('Noro', 'Miyaoka')
+
+第37問
+プログラムを実行し、下記の実行結果を得たい。
+
+Miyashita
+下記のプログラムの(A)に記述すべきコードを選択肢から選びなさい。
+
+dive_into_code = ['Noro', 'Nakao', 'Miyaoka', 'Miyashita', 'Shibata', 'Kimura']
+
+(A)
+
+print(ex_mentor)
+
+× ex_mentor = dive_into_code.destroy(3)
+○ ex_mentor = dive_into_code.pop(3)
+× ex_mentor = dive_into_code.clear(3)
+× ex_mentor = dive_into_code.remove(3)
+
+第38問
+インタープリンタを起動時のオプション「-m」の説明として適切なものを選びなさい。
+
+× メガバイトのファイルを使用できるようにする。
+○ モジュールの指定を行う。
+× マルチモードで起動する。
+× 自分自身の情報をはじめに表示する。
+
+第39問
+以下のプログラムをインタープリタにて実行した際の出力結果を選びなさい。
+
+[(x, y) for x in [0,1,2] for y in [1,2,3] if x != y]
+
+○ [(0, 1), (0, 2), (0, 3), (1, 2), (1, 3), (2, 1), (2, 3)]
+× [(0, 1), (2, 1), (0, 2), (1, 2), (0, 3), (1, 3), (2, 3)]
+× [(0, 1), (1, 1), (2, 1), (0, 2), (1, 2), (2, 2), (0, 3), (1, 3), (2, 3)]
+× [(0, 1), (0, 2), (0, 3), (1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)]
+
+第40問
+Python言語は何型の言語であるか、選択肢の中から選びなさい。
+
+× コンパイラ型
+× トランザクション型
+○ インタプリンタ型
+× 組み換え方式型
