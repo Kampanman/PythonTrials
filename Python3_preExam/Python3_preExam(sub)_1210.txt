@@ -1,0 +1,605 @@
+第3回 Python 3 基礎 模擬試験
+
+1.
+Pythonの特徴に関する次の記述のうち、誤っているものはどれか。
+ Pythonの特徴の一つが可読性の高さである。複雑な操作も単一文で表記可能であり、文のグルーピングがインデントで行われるためコードの見通しが良いなど、プログラムを小さく読みやすく書けるようになっている。ただ変数の宣言は必要であり行わないとエラーとなる。
+ 機械学習、AI、データ分析の分野でPythonが用いられる理由の一つは、Numpyやpandas、scikit-learnなど機械学習向けのサードパーティ製パッケージやそれを用いた環境（Jupyter Notebookなど）が充実していることである。
+ Pythonは柔軟な配列や集合、ディクショナリといった、高水準のデータ型を組み込みで持つ。データ型の一般性が高いためPythonの対応可能な問題領域はAwkやPerlと比較して広い。
+ Pythonは簡単に使えるとはいえ本格的なプログラム言語であり、大きなプログラムを書くために提供された構造やサポート、エラーチェック機構が、シェルスクリプトなどに比べはるかに多く存在する。
+ PythonはWindows、MacOS、Linuxなど多くの環境で動作する、拡張可能なフリーのオープンソースソフトウェアである。
+正答: Pythonの特徴の一つが可読性の高さである。複雑な操作も単一文で表記可能であり、文のグルーピングがインデントで行われるためコードの見通しが良いなど、プログラムを小さく読みやすく書けるようになっている。ただ変数の宣言は必要であり行わないとエラーとなる。
+
+2.
+Pythonインタープリタに関する次の記述のうち、誤っているものはどれか。
+ Pythonモジュールを呼び出すには、「python -m モジュール名 [引数] …」という方法があり、例えば「python -m timeit -h」を実行すると、timeitモジュールの詳細が出力される。
+ インタープリタの起動方法として、「python -cmd コマンド [引数] …」という方法があり、例えば「python -cmd 'print("hello")'」を実行すると、「hello」が出力される。
+ 対話モードの終了方法には、関数の入力によるものと、キー操作によるものとがある。前者の具体的な方法は、quit()の入力である。後者の具体的な方法は、ファイル終端キャラクタの入力である。
+ インタープリタがスクリプト名（スクリプトのファイル名）と続く引数群を知らされると、これらは文字列のリストとなる。import sys を実行することで、このリストにアクセスできる。
+ デフォルトでは、PythonのソースファイルはUTF-8でエンコードしてあるものとして扱われる。
+正答: インタープリタの起動方法として、「python -cmd コマンド [引数] …」という方法があり、例えば「python -cmd 'print("hello")'」を実行すると、「hello」が出力される。
+
+3.
+数値に関する次の記述のうち、誤っているものはどれか。
+ ほとんどの演算子は左から演算が行われるが、例外的にべき乗は右から演算が行われる。例えば「48 // 6 // 4」の演算結果は「2」であり、「2 ** 1 ** 3」の演算結果は「2」である。
+ 切り下げ除算を行って整数解を得たい場合（剰余を捨てたい場合）は「//」演算子を使い、剰余のみを得たい場合は「%」演算子を使う。
+ 等号（=）は、変数を代入するのに使う。変数に代入すると参照先が代入され、値のコピーは行われない。
+ 対話モードでは、最後に表示した式は変数「_」（アンダースコア）に代入される。
+ 整数はint型、小数点を伴う数はfloat（浮動小数点数）型を持つ。演算対象の型が混合していた場合、浮動小数点数は整数に変換される。また除算は常にfloatを返す。
+正答: 整数はint型、小数点を伴う数はfloat（浮動小数点数）型を持つ。演算対象の型が混合していた場合、浮動小数点数は整数に変換される。また除算は常にfloatを返す。
+
+4.
+次のコードの実行結果として正しいものはどれか。
+
+v = 1
+w = 2
+v, w = w + 1, v + 3
+x = w ** 2 + 1
+y = x - 8 / 2
+z = y % 5
+print(w, y, z)
+ 6 2.5 0.5
+ 6 9 4.0
+ 6 33.0 3.0
+ 4 9 0.1
+ 4 13.0 3.0
+正答: 4 13.0 3.0
+
+5.
+文字列に関する次の記述のうち、誤っているものはどれか。なお「￥」はバックスラッシュに読み替えること。
+ Pythonの文字列は改変ができない「変更不能体（immutable）」なものであるが、文字列のインデックス指定（連番による指定）やスライシング（切取）は可能である。
+ 列挙された文字列リテラルは連結される。例えば対話モードで「>>> 'Py' 'thon'」とした場合には、間にスペースを挟んだ形で自動的に連結され「'Py thon'」（yとtの間に半角スペース）となる。
+ トリプルクオート「"""」を使うと、文字列リテラルを複数行にわたって書くことができる。docstring（ドキュメンテーション文字列）でもこの記述方法が使われる。
+ バックスラッシュを前置した文字を特殊文字として解釈させないようにするには、raw文字列を使う。具体的には最初の引用符の前に「r」を置いて「print(r'C:￥some￥name')」のように記述する。
+ 文字列は「*」で繰り返すことができる。「'He' + 3 * 'y'」は対話型インタープリタで出力「'Heyyy'」が得られる。
+正答: 列挙された文字列リテラルは連結される。例えば対話モードで「>>> 'Py' 'thon'」とした場合には、間にスペースを挟んだ形で自動的に連結され「'Py thon'」（yとtの間に半角スペース）となる。
+
+6.
+以下の結果を得たい場合、コードの【A】に入るものとして正しいものはどれか。
+
+[実行結果]
+Simlx
+
+[ コード ]
+Zen = 'SimpleIsBetterThanComplex'
+print('{}{}{}'.format(【A】))
+ Zen[0:2], Zen[-5], Zen[-1]
+ Zen[0:2], Zen[-2], Zen[-1]
+ Zen[0:3], Zen[-3], Zen[-1:]
+ Zen[0:3], Zen[-2], Zen[-2:-1]
+ Zen[0:4], Zen[-3], Zen[-2]
+正答: Zen[0:3], Zen[-3], Zen[-1:]
+
+7.
+次の変数Zenに関して指定した場合、実行時にエラーとなるものはどれか。
+
+Zen = 'NowIsBetterThanNever'
+ Zen[:]
+ Zen[60:80]
+ Zen[10]
+ Zen[:500] + 'Z'
+ Zen[10] = 'X'
+正答: Zen[10] = 'X'
+
+8.
+次のコードの実行結果として正しいものはどれか。
+
+a, b = 8, 10
+while a > 0:
+    print(b, end=',')
+    a -= 2
+    b -= a
+ 10,4,0,-2,
+ 10,8,6,4,2,0
+ 10,8,6,4,2,0,-2
+ 10,4,0,
+ 10,4,
+正答: 10,4,0,-2,
+
+9.
+次のコードの出力結果として正しいものはどれか。
+
+fruits = ['apple', 'kiwi', 'plum']
+for f in fruits[:]:
+    if len(f) < 5:
+        fruits.insert(0, f)
+        fruits.pop()
+
+print(fruits, end = ' ')
+ ['kiwi', 'apple', 'plum']
+ ['plum', 'kiwi', 'apple']
+ ['plum', 'apple', 'kiwi']
+ ['apple', 'kiwi', 'plum']
+ ['apple', 'plum', 'kiwi']
+正答: ['plum', 'kiwi', 'apple']
+
+10.
+次のような結果を得たい場合、コードの【A】の行に入る適切なものはどれか。なお【A】に入るものは、★aの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+Found an even number: 2
+Found an odd number: 3
+Found an even number: 4
+Found an odd number: 5
+Found an even number: 6
+
+[ コード ]
+for num in range(2, 7):
+    if num % 2 == 1:
+        print("Found an odd number:", num) …★a
+        【A】
+    print("Found an even number:", num)
+ continue
+ break
+ pass
+ break:
+ else:
+正答: continue
+
+11.
+次のような結果を得たい場合、コードの【A】に入る適切なものはどれか。
+
+[ 実行結果 ]
+1,-2,-5,-8,
+
+[ コード ]
+for i in range(【A】):
+    print(i, end=",")
+ 1, -8, -3
+ 1, -8, -2
+ 1, -10, -3
+ 4, -8, -2
+ 4, -10, -2
+正答: 1, -10, -3
+
+12.
+次の結果を得たい場合、コードの2行目以降を代替するものとして正しいものはどれか。なお各選択肢の次の行には「 print(i, Zen[i]) 」が記述されるものとする。
+
+[ 実行結果 ]
+0 Simple
+1 is
+2 better
+3 than
+4 complex
+
+[コード]
+Zen = ['Simple','is','better','than','complex']
+for i, v in enumerate(Zen):
+    print(i, v)
+ for i,v in range(len(Zen)):
+ for i,v in range(Zen[0:5]):
+ for i in range(Zen[:]):
+ for i in range(Zen[0:5]):
+ for i in range(len(Zen)):
+正答: for i in range(len(Zen)):
+
+13.
+次のコードの実行結果として正しいものはどれか。
+
+i = 1
+i = 2
+
+def f(arg = 3):
+    i = 4
+    i = 5
+print(arg)
+
+f(i)
+ 1
+ 2
+ 3
+ 4
+ 5
+正答: 2
+
+14.
+次のコードに関し、【A】の行の出力として正しいものはどれか。
+
+def culc(a, b, squares=[], cubes=[]):
+    squares.append(a ** 2)
+    cubes.append(b ** 3)
+    return squares, cubes
+
+print(culc(4, 1))
+print(culc(3, 2))
+print(culc(2, 3)) 【A】
+print(culc(1, 4))
+ ([4], [27])
+ ([16,1], [9, 8], [4, 27])
+ ([1, 8, 27], [16, 9, 4])
+ ([8, 6, 4], [3, 6, 9])
+ ([16, 9, 4], [1, 8, 27])
+正答: ([16, 9, 4], [1, 8, 27])
+
+15.
+次の関数を呼び出す際に、引数の指定として正しいものはどれか。
+
+def location(city, state='NewYork', country='USA'):
+    print("I live in", country, ".")
+    print("My company is located in",city,",",state,".")
+ location(state='Tokyo', 'chiyoda')
+ location('San Francisco', country='USA', state='California')
+ location('Jakarta', 'Cikini', latitude = '-6.1753942')
+ location('Singapore', city='Marina Boulevard')
+ location()
+正答: location('San Francisco', country='USA', state='California')
+
+16.
+次の結果を得たい場合に、コード【A】に入るものとして適切なものはどれか。
+
+[ 実行結果 ]
+[(2, 'a'), (3, 'b'), (1, 'c')]
+
+[ コード ]
+pairs = [(3, 'b'),(1, 'c'),(2, 'a')]
+pairs.sort(key =【A】)
+print(pairs)
+ lambda arg : arg[0]
+ lambda arg[0] : arg
+ lambda arg[1] : arg
+ lambda arg : arg[1]
+ lambda arg : arg
+正答: lambda arg : arg[1]
+
+17.
+次の記述のうち、誤っているものはどれか。
+ PEP8では、クラスや関数には一貫した命名を行うべきであり、クラスには「CamelCase」を、関数やメソッドには「lower_case_with_underscores」を使うべきとされている。
+ トリプルクート「"""」で関数内に記述されたdocstringの内容は、関数の__doc__属性に文字列として格納され、help関数でドキュメントとして表示させることができる。
+ 関数注釈（アノテーション）は関数の__annotations__属性にリストとして格納され、注釈の内容によっては関数のほかの部分に影響を与えることもある。
+ PEP 8では、識別子に非ASCIIキャラクタを使うべきでないとされている。ASCII 範囲内で識別子として有効な文字は、大文字と小文字のアルファベット、アンダースコア、0 から 9の数字である。なお先頭文字は数字以外でなければならない。
+ docstringの1行目は、常にオブジェクトの目的の短く簡潔な要約を記述し、2行目以降がある場合、2行目は空行としてようやくと他の記述を視覚的に分離すべきである。
+正答: 関数注釈（アノテーション）は関数の__annotations__属性にリストとして格納され、注釈の内容によっては関数のほかの部分に影響を与えることもある。
+
+18.
+次のコードの実行結果として正しいものはどれか。
+
+a = [1,3,4,6,3,5]
+a.insert(3, -1)
+a.pop(4)
+a.remove(3)
+print(a)
+ [1, 4, -1, 5]
+ [1, 4, -1, 3, 5]
+ [1, 4, 6, 5, 3]
+ [1, 6, 3, 5, 3]
+ [1, 6, 5]
+正答: [1, 4, -1, 3, 5]
+
+19.
+コードAの1行目を代替するコードBがある。コードBの【A】～【C】のうち、【A】と【B】に入るものとして正しいものはどれか。
+
+[ コードA ]
+cubes = [ a ** 3 for a in range(5)]
+print(cubes)
+
+[ コードB ]
+cubes = 【A】(【B】(【C】 a: a ** 3, range(5)))
+ 【A】set　【B】loop
+ 【A】dic　【B】loop
+ 【A】dic　【B】map
+ 【A】list　【B】loop
+ 【A】list　【B】map
+正答: 【A】list　【B】map
+
+20.
+次の実行結果を得たい場合に、コード1行目～5行目を代替するものとして正しいものはどれか。
+
+[ 実行結果 ]
+[(3, 6), (3, 5), (2, 6), (2, 5), (1, 6), (1, 5)]
+
+[ コード ]
+combs = []
+for x in [3,2,1]:
+    for y in [6,5]:
+        if x != y:
+            combs.append((x, y))
+
+print(combs)
+ combs = [a,b for a in [3, 2, 1] for b in [6,5] if a != b]
+ combs = ([a,b] for a in [3, 2, 1] for b in [6,5] if a != b)
+ combs = [(a,b) for a in [6,5] for b in [3, 2, 1] if a != b]
+ combs = [a,b for a in [6,5] for b in [3, 2, 1] if a != b]
+ combs = [(a,b) for a in [3, 2, 1] for b in [6,5] if a != b]
+正答: combs = [(a,b) for a in [3, 2, 1] for b in [6,5] if a != b]
+
+21.
+次のような結果を得たい場合に、コードの2行目（★印の行）を代替するものとして正しいものはどれか。
+
+[ 実行結果 ]
+[[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+
+[コード]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+power = [[row[i] for row in matrix] for i in range(3)] …★
+
+print(power)
+ power = zip[*matrix]
+ power = zip(*matrix)
+ power = zip(list(matrix))
+ power = list(zip(*matrix))
+ power = list(zip(matrix))
+正答: power = list(zip(*matrix))
+
+22.
+次のコードの実行結果として正しいものはどれか。
+
+Zen = 'NowIsBetterThanNever'
+print(Zen[1:19:4])
+ Beav
+ BtTnv
+ oBeav
+ oBene
+ ostraer
+正答: oBeav
+
+23.
+データ構造に関する次の記述のうち誤っているものはどれか。
+ 集合の生成には中カッコ{}またはset()関数を使用する。ただし空の集合を生成するには、{}ではなくset()を使う必要がある。例えば「empty = {}」とすると空のディクショナリが生成される。
+ ディクショナリに対する帰属性判定演算子「in」「not in」による判定において、「含まれるかどうか」の判定の対象は「値」ではなく「キー」である。
+ リストと集合は変更可能（mutable）、タプルは変更不能（immutable）である。
+ ディクショナリは変更可能（mutable）であるが、キーの型は変更不能（immutable）であり、その値は一意でなければならない。
+ ディクショナリにループをかけるときにenumerate()関数を使うと、キーとそれに対応した値を同時に得られる。
+正答: ディクショナリにループをかけるときにenumerate()関数を使うと、キーとそれに対応した値を同時に得られる。
+
+24.
+対話モードで入力したときに「True」が返されるものは次のうちどれか。
+ (1, 2, 5, 20, 30) > (2, 3, 4, 5)
+ 'PHP' > 'Perl' > 'Python'
+ 'Matplotlib' > 'NumPy' > 'pandas' > 'scikit-learn'
+ (2,3,('aa','ab')) < (2,3,('abc','a'),5)
+ (-1, -10, -2, -5) > (-1, -2, -5)
+正答: (2,3,('aa','ab')) < (2,3,('abc','a'),5)
+
+25.
+モジュールに関する次の記述のうち、正しいものはどれか。
+ sys.pathが初期化されている場所は、PYTHONPATHとインストールごとのデフォルトであり、入力スクリプトのあるディレクトリは含まれない。
+ あるモジュールがインポートされるときにインタープリタが検索する順序は、まずビルトインモジュール、次にsys.path変数で得られるディレクトリ、そしてシンボリックリンクを置いてあるディレクトリである。
+ モジュール読み込みの高速化のため、Pythonはコンパイル済みのモジュールを「__python_cache__」ディレクトリにmodule.バージョン名.pyの名前でキャッシュする。
+ モジュールの中では、グローバル変数「__modname__」の値としてモジュール名（文字列）がセットされている。
+ 実行中のスクリプトのあるディレクトリは、検索パスの最初、標準ライブラリのパスよりも前方に置かれる。
+正答: 実行中のスクリプトのあるディレクトリは、検索パスの最初、標準ライブラリのパスよりも前方に置かれる。
+
+26.
+あるディレクトリを、パッケージを含むものとして扱わせるために必要とされるファイルは次のうちどれか。
+ __sub__.py
+ __dir__.py
+ __init__.py
+ __package__.py
+ __directory__.py
+正答: __init__.py
+
+27.
+入出力に関する次の記述のうち、誤っているものはどれか。
+ 文字列オブジェクトのrjust()メソッドは、文字列の左側にスペースを追加して、指定の幅に右揃えするものである。
+ 文字列オブジェクトのzfillメソッドは、プラスとマイナスの記号も含めて指定文字数となるように、数字の文字列の左側をゼロでパディングするものである。
+ 標準モジュールjsonは、Pythonのデータ階層構造を取って文字列表現にコンバートすることができる。このプロセスを「シリアライズ」という。シリアライズで文字列表現されたオブジェクトは、「デシリアライズ」という。
+ open()はファイルオブジェクトを返す関数である。open関数は第1引数にファイル名を、第2引数にモードを与えて使う。モードはファイルを読み込み専用で開くなら「r+」、書き出し専用なら「w」、追加なら「r」、読み書き療養なら「a」を指定する。
+ 値を書き出す方法には、print()関数やwriteメソッドなどがある。出力のフォーマット方法には、文字列スライシングと連結操作で行う方法や、formatメソッドを利用する方法などがある。
+正答: open()はファイルオブジェクトを返す関数である。open関数は第1引数にファイル名を、第2引数にモードを与えて使う。モードはファイルを読み込み専用で開くなら「r+」、書き出し専用なら「w」、追加なら「r」、読み書き療養なら「a」を指定する。
+
+28.
+次のスクリプトを実行して「整数a:」に「3」、「整数b:」に「b」を入力した場合の正しい結果はどれか。なお選択肢中の「, 」は改行に読み替えること。
+
+try:
+    int_a = int(input('整数a:'))
+    int_b = int(input('整数b:'))
+    print(int_a ** 2)
+    print((int_a ** 2) / int_b)
+except(ZeroDivisionError) :
+    print('C')
+except(ValueError) :
+    print('D')
+except:
+    print('E')
+else:
+    print('F')
+finally:
+    print('G')
+ D, E, F, G
+ D, F, G
+ E, F, G
+ D, G
+ G
+正答: D, G
+
+29.
+エラーと例外に関する次の記述のうち誤っているものはどれか。
+ raise文を用いることで、指定の例外を意図的に発生させることができる。raiseの引数は送出する例外を示すものであり、例外インスタンスでも、Exceptionクラスの派生クラスであるクラス（例外クラス）でも構わない。
+ 発生した例外に値が付随することもあり、これを例外の引数と呼ぶ。except 節では、例外名の後に変数を指定することができる。この変数には例外インスタンスが結び付けられており、例外インスタンスには「__str__()」が定義してある。
+ [Ctrl]+[c]キーなどでユーザーがプログラムに割り込みをかけると、KeyboardInterrupt例外が送出される。
+ パーサ（構文解釈器）は違反のある行を表示し、最初にエラーが検知された点に下線が引かれる。エラーは矢印より前のトークンが原因である。
+ 例外のほとんどはプログラムでは処理されず、その結果はエラーメッセージにあらわれる。エラーメッセージの最終行には、NameError、TypeErrorなど例外の型が記されている。
+正答: パーサ（構文解釈器）は違反のある行を表示し、最初にエラーが検知された点に下線が引かれる。エラーは矢印より前のトークンが原因である。
+
+30.
+次のコードを実行した場合には適切な方法で、あるクリーンアップがなされる。具体的にはどのような処理がなされているか。
+
+with open("file.txt") as f:
+    for line in f:
+        print(line, end="")
+ file.closed()
+ file.close()
+ file.clean()
+ f.closed()
+ f.close()
+正答: f.close()
+
+31.
+次の実行結果を得たい場合、コードの【A】【B】【C】【D】【E】に入る組み合わせとして適切なものはどれか。
+
+[ 実行結果 ]
+Magatama is a
+Saya's
+reliable
+partner
+
+[コード]
+class kusanagi(Exception):
+    pass
+
+def raise_character(a):
+    print("【A】")
+    raise kusanagi
+    print("【B】")
+
+def func(name: int):
+    try:
+        print(name, "【C】")
+        raise_character(name)
+    except kusanagi:
+        print("【D】")
+        raise Exception
+
+name = "Magatama"
+try:
+    func(name)
+except Exception:
+    print("【E】")
+ 【A】reliable【B】Saya's【C】is a【D】goofy【E】partner
+ 【A】reliable【B】goofy【C】is a【D】Saya's【E】partner
+ 【A】Saya's【B】reliable【C】is a【D】goofy【E】partner
+ 【A】Saya's【B】goofy【C】is a【D】reliable【E】partner
+ 【A】goofy【B】reliable【C】is a【D】Saya's【E】partner
+正答: 【A】Saya's【B】goofy【C】is a【D】reliable【E】partner
+
+32.
+次のスクリプトの実行結果として正しいものはどれか。なお各選択肢内は実際は改行されているものとして読み替えること。
+
+loc = "1"
+def scope():
+    loc = "2"
+    def do_local():
+        loc = "3"
+    def do_nonlocal():
+        nonlocal loc
+        loc = "4"
+    def do_global():
+        global loc
+        loc = "5"
+
+    do_local()
+    print("【A】", loc)
+    do_nonlocal()
+    print("【B】", loc)
+    do_global()
+    print("【C】", loc)
+
+print("【D】", loc)
+scope()
+print("【E】", loc)
+ 【A】 3 【B】 3 【C】 5 【D】 2 【E】 5
+ 【A】 3 【B】 2 【C】 5 【D】 2 【E】 1
+ 【A】 2 【B】 3 【C】 4 【D】 2 【E】 1
+ 【A】 2 【B】 4 【C】 4 【D】 1 【E】 5
+ 【A】 2 【B】 4 【C】 5 【D】 1 【E】 5
+正答: 【A】Saya's【B】goofy【C】is a【D】reliable【E】partner
+
+33.
+次の実行結果を得たい場合、コードの【A】【B】の行および【C】に入る組み合わせとして適切なものはどれか。なお【A】は★aの行と同じ数の空白でインデントされている。
+
+[ 実行結果 ]
+Need Speed?
+I'm Saya.
+Need Speed?
+I'm David.
+
+[ コード ]
+class kusanagi():
+    def s(self):
+        print("Need Speed?") 　 …★a　
+        【A】
+    def m(self): 
+        print("I'm Saya.")
+
+class wexal(kusanagi):
+        def 【B】:
+            print("I'm David.")
+
+k = kusanagi()
+w = wexal()
+k.s()
+w.【C】
+ 【A】self(m)　【B】m(self):　【C】s()
+ 【A】self(m)　【B】self(m):　【C】s(self)
+ 【A】self.s()　【B】m(self):　【C】s(self)
+ 【A】self.m()　【B】m(self):　【C】s()
+ 【A】self.m()　【B】self(m):　【C】s()
+正答: 【A】self.m()　【B】m(self):　【C】s()
+
+34.
+次のファイル「script.py」を作成し、コマンドライン上で「python3 script.py one two three four five」を実行したときの結果として正しいものはどれか。
+
+[ script.py ]
+import sys
+print(sys.argv[0:4])
+ ['script.py', 'one', 'two', 'three']
+ ['script.py', 'one', 'two', 'three', 'four']
+ ['python3', 'script.py', 'one']
+ ['python3', 'script.py', 'one', 'two']
+ ['python3', 'script.py', 'one', 'two', 'three']
+正答: ['script.py', 'one', 'two', 'three']
+
+35.
+次の正規表現を用いたコードの【A】の部分に入れたときエラーとなるものはどれか。
+import re
+prog = re.compile('(K|S)u(r|s)(a|o)nf?(a|o)(o|m)?g?i?(saya)?', re.IGNORECASE)
+【A】
+print(ret[0])
+ ret = prog.search('KUSANAGISAYA')
+ ret = prog.search('Kuronami')
+ ret = prog.search('SuZunone')
+ ret = prog.search('SUSANOO')
+ ret = prog.search('kusanomi')
+正答: ret = prog.search('SuZunone')
+
+36.
+モジュールに関する次の記述のうち誤っているものはどれか。
+ processingモジュールを使うと、コード処理の実行時間を計測できる。
+ smtplibモジュールを使うと、任意のインターネット上のホストにメールを送ることができる。
+ randomモジュールを使うと、疑似乱数を生成することができる。
+ urllib.request モジュールを使うと、URLにあるデータを取得することができる。
+ statisticsモジュールを使うと、数値データの基本統計量（平均、中央値、分散など）を取得することができる。
+正答: processingモジュールを使うと、コード処理の実行時間を計測できる。
+
+37.
+今日の日付を次の実行結果のように得たい場合、スクリプトの1行目【A】と2行目の【B】に入る適切なものはどれか。
+
+[ 実行結果 ]
+2020-07-02
+
+[ スクリプト ]
+【A】
+today = 【B】
+print(today)
+ 【A】import date 【B】datetime.date(today)
+ 【A】from datetime 【B】date.today()
+ 【A】from datetime import date　 【B】date.today()
+ 【A】import datetime from date 【B】datetime.today()
+ 【A】import date from datetime 【B】datetime.today()
+正答: 【A】from datetime import date　 【B】date.today()
+
+38.
+loggingモジュールのメッセージの優先度として正しいものはどれか。左から順に優先度が高いものとする。
+ ERROR、CRITICAL、WARNING、INFO、DEBUG
+ ERROR、CRITICAL、WARNING、DEBUG、INFO
+ CRITICAL、ERROR、WARNING、DEBUG、INFO
+ CRITICAL、ERROR、WARNING、INFO、DEBUG
+ CRITICAL、WARNING、ERROR、INFO、DEBUG
+正答: CRITICAL、ERROR、WARNING、INFO、DEBUG
+
+39.
+仮想環境とパッケージに関する次の記述のうち正しいものはどれか。
+ pip install でパッケージ名を指定し、そのパッケージ名の後ろに「=」とバージョン名を付けると、そのバージョンのパッケージをインストールできる。
+ 「pip upgrade パッケージ名」とすることで、当該パッケージを最新バージョンにアップグレードすることができる。
+ pip freezeはその仮想環境にインストールされたすべてのパッケージを表示する。pip listも同様の働きをするが、両者は出力形式が異なる。pip listはその仮想環境にインストールされたすべてのパッケージを、pip install向けの形式で出力する。
+ pip uninstall にパッケージ名を指定すると、その仮想環境からパッケージを削除できる。削除対象となるパッケージの複数指定はできない。
+ 仮想環境を作成、管理するのに使われるスクリプトはpyvenvである。
+正答: 仮想環境を作成、管理するのに使われるスクリプトはpyvenvである。
+
+40.
+次の記述に関して正しいものはどれか。
+ デフォルト設定ではユーザーディレクトリの「.pyhistory」ファイルにヒストリが保存される。ヒストリは対話型インタープリタセッションで利用できる。
+ [Ctrl]+[t]キーを押すと補完機能が呼び出せる。この機能はPythonの文（命令）の名前、現在のローカル変数、使用できるモジュール名を検索するものである。
+ 拡張された対話型インタープリタとしてBythonがある。これはオブジェクト探索、高度なヒストリ管理などの機能を持つ。
+ IPythonは「pip install ipython」でインストールできる。IPythonの対話モードはipythonコマンドで起動できる。終了時はdeactivateコマンドを実行すればよい。
+ 変数とモジュールの補完機能は、インタープリタの起動時に自動で有効になっている。
+正答: 変数とモジュールの補完機能は、インタープリタの起動時に自動で有効になっている。
